@@ -10,11 +10,16 @@
         <script th:src="@{/js/rutinas.js}"></script>
         <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
-        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>        
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>       
+        <style>
+            a {
+                color: black !important;
+            }
+        </style>
     </head>
     <body>
         <header th:fragment="header" class="header"> 
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0"> 
+            <nav class="navbar navbar-expand-sm navbar-dark p-0" style="background-color: blue; height: 50px; align-items: center; justify-content: center"> 
                 <div class="container"> 
                     <a th:href="@{/}" class="navbar-brand">[[#{aplicacion.titulo}]]</a> 
                     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"> 
@@ -22,7 +27,7 @@
                     </button> 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse"> 
                         <ul class="navbar-nav"sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_VENDEDOR')"> 
-                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li> 
+                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/categoria/listado}" style="color:black">[[#{plantilla.categorias}]]</a></li> 
                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li> 
 
                             <li class="nav-item dropdown" sec:authorize="hasRole('ROLE_ADMIN')">

@@ -96,6 +96,11 @@
             <artifactId>thymeleaf-extras-springsecurity6</artifactId>
         </dependency>
         
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.20.5</version>
+        </dependency>
         
         <dependency>
             <groupId>javax.validation</groupId>
@@ -108,12 +113,6 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
         
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>6.1.0</version>
-            <type>jar</type>
-        </dependency>
     </dependencies>
     
     <build>
